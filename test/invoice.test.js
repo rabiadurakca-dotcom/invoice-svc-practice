@@ -6,7 +6,7 @@ const { invoiceTotal, lineTotalCents } = require("../src/invoice");
 test("invoice total rounds to cents", () => {
   // Lab 2 breaks this on purpose (change 100.01 -> 100.02) to see a red build.
   const items = [{ unitPrice: 100.01, qty: 1 }];
-  assert.strictEqual(invoiceTotal(items), 100.01);
+  assert.strictEqual(invoiceTotal(items), 100.02);
 });
 
 test("multiple lines sum correctly", () => {
